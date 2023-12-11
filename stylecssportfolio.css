@@ -1,0 +1,668 @@
+/*=========================/*=========================/*=========================
+                              CSS général
+/*=========================/*=========================*//*===================/**/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: rgb(204, 204, 204);
+}
+
+nav>div {
+    position: relative;
+}
+
+nav div ul.menu li .nav-link {
+    text-decoration: none;
+}
+
+
+.hidden {
+    display: none;
+}
+
+/*=========================/*=========================/*=========================
+                              CSS header
+/*=========================/*=========================*//*===================/**/
+
+header {
+    position: relative;
+    width: 100%;
+    margin: 0;
+}
+
+ul {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+/*=========================/*
+        CSS image
+/*=========================*/
+
+#imageprincipal {
+    position: relative;
+    width: 100%;
+    padding-bottom: 37.5%;
+    overflow: hidden;
+}
+
+#imageprincipal img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.presentation .text {
+    font-size: 18px;
+}
+
+/*=========================/*
+        CSS media querie
+/*=========================*/
+
+@media screen and (max-width: 1000px) {
+
+    header,
+    nav,
+    .presentation .text,
+    .presentation .image {
+        width: 100%;
+    }
+
+    .presentation .text p {
+        margin: 0 auto;
+        max-width: 90%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .presentation .text {
+        font-size: 20px;
+    }
+}
+
+/*=========================/*=========================/*=========================
+                              CSS pour le footer
+=========================*//*=========================/*=========================*/
+
+footer {
+    padding: 20px 0;
+    background-color: #4e4e4e;
+    color: white;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Alignement des éléments aux extrémités */
+    align-items: center; /* Alignement vertical */
+    text-align: center;
+}
+
+.social-media-icons {
+    margin: 0 10px;
+    color: white;
+    font-size: 24px;
+    margin-left: 30px;
+}
+
+.footer-link {
+    margin-right: 30px;
+}
+
+.footer2 {
+    color: #ffffff; /* Couleur du texte */
+    font-weight: bold; /* Texte en gras */
+    padding: 30px;
+}
+
+.social-media-icons a {
+    margin: 0 10px;
+    color: white;
+    font-size: 24px;
+}
+
+.social-media-icons a:hover {
+    color: #313fff;
+}
+
+
+/*=========================/*=========================/*=========================
+                              CSS pour la navbar
+=========================*//*=========================/*=========================*/
+
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 10px 0;
+    background-color: #333;
+    margin: 0;
+}
+
+ul li {
+    color: white;
+    cursor: pointer;
+    margin: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/*=========================/*
+        CSS du Menu Burger
+/*=========================*/
+
+.hamburger-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 50px;
+    color: white;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.hamburger-icon.open {
+    color: white;
+    font-size: 60px;
+}
+
+/*=========================/*
+        CSS media querie
+/*=========================*/
+
+@media screen and (max-width: 1000px) {
+    .menu {
+        position: flex;
+        flex-direction: column;
+        text-align: center;
+        height: 100vh;
+        font-size: 30px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .menu::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url('images/Vue\ rapprochée\ d\'une\ série\ de\ codes\ sur\ un\ écran\ d\'ordinateur.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: 0.1;
+        z-index: -1;
+    }
+
+    ul li {
+        color: white;
+        position: relative;
+        z-index: 2;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .hamburger-icon {
+        display: none;
+    }
+}
+
+/*=========================/*=========================/*=========================
+                              CSS présentation
+/*=========================/*=========================*//*===================/**/
+
+.presentation {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.text {
+    flex: 1;
+    padding-right: 20px;
+    text-align: left;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-bottom: 30px;
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+    margin-right: 10%;
+}
+
+img[src="images/moi 2023.jpg"] {
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin: 0 auto;
+    width: 350px;
+    /* Ajustez la largeur selon vos besoins */
+    height: 350px;
+    /* Ajustez la hauteur selon vos besoins */
+}
+
+/*=========================/*
+        CSS media querie
+/*=========================*/
+
+@media screen and (max-width: 1000px) {
+    .presentation {
+        flex-direction: column;
+    }
+
+    .text {
+        width: 100%;
+        text-align: left; /* Alignement du texte à gauche */
+        margin-right: 0; /* Assurez-vous qu'il n'y a pas de marge inutile */
+        order: 1; /* Texte en premier */
+    }
+
+    .image {
+        order: 2; /* Image en second */
+        width: 100%;
+        display: flex;
+        justify-content: center; /* Centre l'image horizontalement */
+        margin-right: 0; /* Assurez-vous qu'il n'y a pas de marge inutile */
+    }
+
+    img[src="images/moi 2023.jpg"] {
+        width: 350px; /* Largeur de l'image */
+        height: 350px; /* Hauteur de l'image */
+        margin: 0 auto; /* Centre l'image verticalement et horizontalement */
+    }
+}
+
+/*=========================/*=========================/*=========================
+                              CSS réalisation
+/*=========================/*=========================*//*===================/**/
+
+.image img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+.realisation {
+    text-align: center;
+    padding: 20px 0;
+    margin: 0;
+}
+
+.realisation h2 {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+
+.realisation .text2 {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    padding: 0 5%;
+}
+
+.image-container {
+    width: 30%;
+    margin: 0 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-title {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1em;
+    margin-bottom: 30px;
+}
+
+/*=========================/*
+        CSS media querie
+/*=========================*/
+
+@media screen and (max-width: 1000px) {
+    .realisation .text2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .realisation .image-container {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .realisation .image-title {
+        text-align: center;
+        font-size: 20px;
+    }
+}
+
+/*=========================/*=========================/*=========================
+                              CSS service
+/*=========================/*=========================*//*===================/**/
+
+.services {
+    text-align: center;
+    padding: 20px 0;
+    margin: 0;
+    margin-bottom: 30px;
+}
+
+.services h2 {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+
+.services .text2 {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    padding: 0 5%;
+}
+
+/*=========================/*
+        CSS media querie
+/*=========================*/
+
+@media screen and (max-width: 1000px) {
+    .services .text2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .services .image-container {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .services .image-title {
+        text-align: center;
+        font-size: 20px;
+    }
+}
+
+/*=========================/*=========================/*=========================
+                              CSS progress bar / compétence
+/*=========================/*=========================*//*===================/**/
+
+.skills-container {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.skills-section {
+    position: relative;
+    padding: 20px;
+    width: 100%;
+}
+
+.skills-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('images/Lueur du code sur ecran d-un développeur web mobile 3.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.4;
+    z-index: -1;
+}
+
+.skill {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    color: black;
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.progress {
+    width: 45%;
+    background-color: white;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 25px;
+    background-color: #636363;
+    border-radius: 3px 0 0 3px;
+    transition: width 0.4s ease;
+}
+
+
+/*=========================/*=========================/*=========================
+                              CSS form
+/*=========================/*=========================*//*===================/**/
+
+.skills-container2 {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.skills-section2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('images/Développeur web discutant d-une innovation avec son équipe.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.4;
+    z-index: -1;
+}
+
+.skills-section2 {
+    position: relative;
+    padding: 20px;
+    width: 100%;
+    min-height: 900px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-form {
+    width: 80%;
+    max-width: 2000px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+/*.form-group {
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    background-color: #222324;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #555556;
+}*/
+
+.contact-form iframe {
+    width: 100%;
+    height: 900px;
+    border: none;
+}
+
+
+/*=========================/*=========================/*=========================
+                              CSS blog
+/*=========================/*=========================*//*===================/**/
+
+.image-blog img {
+    display: block;
+    margin: 0 auto;
+    margin-left: auto;
+    margin-left: auto;
+    height: 500px;
+    width: 80%;
+    border-radius: 10px;
+}
+
+/*=========================/*
+        CSS media querie
+/*=========================*/
+
+@media screen and (max-width: 1000px) {
+    .image-blog img {
+        height: 400px;
+        width: 80%;
+    }
+}
+
+/*=========================/*=========================/*=========================
+                              CSS contact
+/*=========================/*=========================*//*===================/**/
+
+.presentation2 {
+    display: flex; /* Utilisez flex pour une disposition réactive */
+    justify-content: space-between; /* Espacement entre les éléments */
+    align-items: center; /* Alignement vertical */
+    padding: 20px 0;
+}
+
+/* Style pour l'image */
+.image-contact {
+    flex: 1; /* Permet à l'élément de grandir mais avec une limite */
+    max-width: 350px; /* Limite la largeur maximale de l'image */
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    margin-right: 10%; /* Espace à droite */
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.image-contact img {
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px; /* Utilisez 100% pour que l'image s'adapte au conteneur */
+    height: 300px; /* Gardez la hauteur automatique pour maintenir le ratio */
+}
+
+/* Style pour le texte */
+.text2 {
+    flex: 3; /* Donne plus d'espace au texte */
+    padding: 0 10%; /* Padding sur les côtés */
+    text-align: justify; /* Justifie le texte pour une meilleure lecture */
+    margin-bottom: 30px;
+}
+
+/*=========================/*
+        CSS media querie
+/*=========================*/
+
+/* Styles pour les écrans de moins de 1000px */
+@media screen and (max-width: 1000px) {
+    .presentation2 {
+        flex-direction: column; /* Change la direction en colonne */
+    }
+
+    .image-contact, .text2 {
+        flex: none; /* Annule la propriété flex */
+        max-width: 100%; /* Permet aux éléments de prendre toute la largeur */
+        margin-right: 0; /* Supprime la marge à droite */
+    }
+
+    .text2 {
+        order: 1; /* Texte en haut */
+        text-align: left; /* Alignement du texte à gauche */
+    }
+
+    .image-contact {
+        order: 2; /* Image en bas */
+        display: flex;
+        justify-content: center; /* Centre horizontalement l'image */
+    }
+
+    .image-contact img {
+        width: 300px; /* Utilisez 100% pour que l'image s'adapte au conteneur */
+        height: 300px; /* Gardez la hauteur automatique pour maintenir le ratio */
+    }
+}
